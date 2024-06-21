@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My calculator</title>
+    <link rel="stylesheet" href="tailwind_calculator.css">
+</head>
+
+<body class="bg-white dark:bg-slate-900">
+    <div class="flex flex-row justify-center">
+        <button id="darkModeBtn" class="m-4 p-2 border border-gray-300 bg-white dark:bg-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-slate-900">Dark mode</button>
+        <button id="lightModeBtn" class="m-4 p-2 border border-gray-300 bg-white dark:bg-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-slate-900">Light mode</button>
+    </div>
+
+    <div class="dark:text-white text-black flex items-center justify-center ">
+        <div class="shadow-lg rounded-lg p-4 border border-gray-400">
+            <div class="mb-4 gap-2 grid grid-flow-col ">
+                <div><input type="text" value="0" class="border border-gray-300 text-right p-1 h-[48px] w-[160px] dark:bg-slate-800"></div>
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-customRed hover:bg-[#ddd] dark:bg-purple-800 dark:hover:bg-purple-950">C</div>
+            </div>
+
+            <div class="grid grid-cols-4 gap-2 text-center text-xl">
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-gray-300 hover:bg-[#ddd] dark:bg-slate-800 dark:hover:bg-slate-900">7</div>
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-gray-300 hover:bg-[#ddd] dark:bg-slate-800 dark:hover:bg-slate-900">8</div>
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-gray-300 hover:bg-[#ddd] dark:bg-slate-800 dark:hover:bg-slate-900">9</div>
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-gray-200 hover:bg-[#ddd] dark:bg-slate-800 dark:hover:bg-slate-900">÷</div>
+
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-gray-300 hover:bg-[#ddd] dark:bg-slate-800 dark:hover:bg-slate-900">4</div>
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-gray-300 hover:bg-[#ddd] dark:bg-slate-800 dark:hover:bg-slate-900">5</div>
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-gray-300 hover:bg-[#ddd] dark:bg-slate-800 dark:hover:bg-slate-900">6</div>
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-gray-200 hover:bg-[#ddd] dark:bg-slate-800 dark:hover:bg-slate-900">&times</div>
+
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-gray-300 hover:bg-[#ddd] dark:bg-slate-800 dark:hover:bg-slate-900">1</div>
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-gray-300 hover:bg-[#ddd] dark:bg-slate-800 dark:hover:bg-slate-900">2</div>
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-gray-300 hover:bg-[#ddd] dark:bg-slate-800 dark:hover:bg-slate-900">3</div>
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-gray-200 hover:bg-[#ddd] dark:bg-slate-800 dark:hover:bg-slate-900">-</div>
+                
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-gray-200 hover:bg-[#ddd] dark:bg-slate-800 dark:hover:bg-slate-900">.</div>
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-gray-300 hover:bg-[#ddd] dark:bg-slate-800 dark:hover:bg-slate-900">0</div>
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-gray-200 hover:bg-[#ddd] dark:bg-slate-800 dark:hover:bg-slate-900">+</div>
+                <div class="w-[48px] h-[48px] flex items-center justify-center bg-customGreen hover:bg-[#ddd] dark:bg-purple-800 dark:hover:bg-purple-950">=</div>
+            </div>
+        </div>
+
+        <script>
+            // custom config for the MTW app 
+            const mtwAppConfig = {
+                border: true // app border in the MTW page                    
+            }
+
+            ///////////////////////////////////////////////////////
+            // implement this functions in order to use private API        
+            const sendPrivateApiRequest = async () => {
+                // your code here:
+                // sendRequestToParent({ cat: 'getAssets' })
+            }        
+
+            const acceptPrivateApiResponse = async (data) => {
+                // process received data here:
+                // console.log(data)
+            }
+
+            // use this in order to send on document load
+            document.addEventListener('DOMContentLoaded', () => {
+                // your code here:
+                //sendRequestToParent({ method: 'getAssets' })
+            })
+        </script>
+        <script src="https://morethanwallet.com/appstore/index.js"></script>
+    </div>
+</body>
+<script src="calculator.js"></script>
+</html>
